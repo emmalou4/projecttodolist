@@ -4,18 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<%- include('./partials/head.ejs') %>
 		<title>To Do List</title>
-		<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
         <nav>
-            <a href="/todos/new">Add a New Task</a>
+            
         </nav>
 		<h1>The To Do List App</h1>
+		<fieldset>
 		<h3>The handy, easy to access, digital to do list!</h3>
 		<p>You can begin by adding/deleting/modifying the following tasks. Then, customize the list as you go throughout your day!</p>
 		<p>Enjoy!</p>
-		<ul>
+		<ol>
 			<% todos.forEach(todo => { %>
 				<li>
 					<a href="/todos/<%=todo._id %>"> <%=todo.task %> </a>
@@ -25,6 +26,8 @@
 					<a href="/todos/<%=todo._id %>/edit">Edit</a>
 				</li>
 			<% }) %>
-		</ul>
+		</ol>
+		<a href="/todos/new">Add a New Task</a>
+	</fieldset>
 	</body>
 </html>

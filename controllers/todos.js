@@ -3,7 +3,6 @@ const express = require('express');
 const todosRouter = express.Router(); 
 const Todo = require('../models/todo');
 
-
 // Index
 todosRouter.get('/', (req, res) => {
 	Todo.find({}, (error, allTodos) => {

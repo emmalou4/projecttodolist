@@ -4,11 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<%- include('./partials/head.ejs') %>
 		<title>The To Do List</title>
-		<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
 		<h1>Edit Task</h1>
+		<h2>
 		<form action="/todos/<%=todo._id%>?_method=PUT" method="POST">
 			Task: <input type="text" name="task" value="<%= todo.task %>"/><br />
 			Notes: <input type="text" name="notes" value="<%= todo.notes %>"/><br />
@@ -18,5 +19,6 @@
 			<% } %> /><br />
 			<input type="submit" name="" value="Edit Task" />
 		</form>
+		</h2>
 	</body>
 </html>

@@ -19,6 +19,8 @@ mongoose.connect(process.env.DATABASE_URL, {
 	useCreateIndex: true,
 });
 
+app.use(express.static("public"));
+
 // Database Connection Error/Success
 // Define callback functions for various events
 const db = mongoose.connection
@@ -27,11 +29,11 @@ db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Routes / Controllers
-app.use(express.static(__dirname + '/public'));
 
 const todosController = require('./controllers/todos');
 
 app.use('/todos', todosController);
+
 
 
 // Listener
