@@ -1,5 +1,5 @@
 # The To Do List 
-The To Do List was inspired by my love to make lists. I love making lists but sometimes it's hard for me to remember to go back back to the list and modify or "delete" things that I have completed throughout the day. This app allows to you modify and delete the items on your list as you go through one handy web app. 
+The To Do List was inspired by my love to make lists. I love making lists but sometimes it's hard for me to remember to go back back to the list and modify or "delete" things that I have completed throughout the day. This app allows to you modify and delete the items on your list as you go through on one handy web app. 
 
 ## Technologies Used
 JavaScript
